@@ -1,29 +1,35 @@
-
-
-<html>
+<!DOCTYPE HTML>
+<html lang="es-ES">
 <head>
-<title>ejemplo</title>
+	<meta charset="UTF-8">
+	<title>Suma de 2 numeros en PHP</title>
 </head>
-
 <body>
-<form name="form1" method="post" action="ejemplo6.php">
-valor1: <input name="sum1" type="text" ><br>
-valor2: <input name="sum2" type="text" ><br>
-valor3: <input name="sum3" type="text" ><br>
-<input type="submit" name="submit" value="sumar" ><br>
+<H2>Suma de 2 numeros en PHP</H2>
+<form action="suma.php" method="POST">
+	<table>
+	<tr>
+		<td><input type="text" name="numero1"></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="numero2"></td>
+	</tr>
+	<tr>
+		<td> <input type="submit" value="sumar"> </td>
+	</tr>
+</table>
 </form>
-<br><br>
-TOTAL :
-<?php
-
-$sum1=$_POST['sum1'];
-$sum2=$_POST['sum2']; 
-$sum3=$_POST['sum3']; 
-
-$suma=$sum1 + $sum2 + $sum3;
-
-echo $suma;
-
-?> 
 </body>
 </html>
+<?php
+	if($_POST)
+	{	
+		$num1 = $_POST
+		['numero1'];
+		$num2 = $_POST
+		['numero2'];
+		$suma = $num1 
+		+ $num2;
+		echo "La suma de ".$num1." y ".$num2." es ".$suma; 
+	}
+?>
